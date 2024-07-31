@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Product-catalog
+server:
+  port: 8082 # or any desired port
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+feign:
+  client:
+    config:
+      usermanagement:
+        url: http://localhost:8081
